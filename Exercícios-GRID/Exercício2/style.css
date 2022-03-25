@@ -1,0 +1,60 @@
+body{
+    margin: 0%;
+    padding: 0%;
+
+}
+.matriz{
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr; 
+    grid-template-areas: "n n n n" "s m m m" "s c1 c2 c3" "s f f f";
+    text-align: center;
+    grid-gap: 0.2rem;
+    
+}
+.navbar{
+    background: #cdb4db;
+    grid-area: n;
+    border-radius: 5px;
+}
+.main{
+    background: #3c096c;
+    grid-area: m;
+    border-radius: 5px;
+}
+.sidebar{
+    background: #8338ec;
+    grid-area: s;
+    border-radius: 5px;
+}
+.content1{
+    background: lightskyblue;
+    grid-area: c1;
+    border-radius: 5px;
+}
+.content2{
+    background: turquoise;
+    grid-area: c2;
+    border-radius: 5px;
+}
+.content3{
+    background: mediumturquoise;
+    grid-area: c3;
+    border-radius: 5px;
+}
+.footer{
+    background: #20b2aa;
+    grid-area: f;
+    border-radius: 5px;
+} 
+
+@media only screen and (max-width: 550px){
+    .matriz{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: "n" "s" "m" "c1" "c2" "c3" "f";
+    }
+}
